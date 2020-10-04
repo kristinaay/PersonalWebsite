@@ -1,7 +1,7 @@
 # PersonalWebsite
 HTML/CSS and Javascript for a personal portfolio website.\
 Author: Kristina Yin\
-Class Link: https://johnguerra.co/classes/webDevelopment_fall_2020/\
+Class Link: https://johnguerra.co/classes/webDevelopment_fall_2020/ \
 Project Objective: To create a visually appealing and informative personal web page.\
 Includes information about me, my projects, my social media, and a way to contact me.
 Below are two screenshots of the homepage of the website: one in light mode, and one in dark mode.\
