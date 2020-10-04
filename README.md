@@ -6,7 +6,7 @@ Project Objective: To create a visually appealing and informative personal web p
 Includes information about me, my projects, my social media, and a way to contact me.
 Below are two screenshots of the homepage of the website: one in light mode, and one in dark mode.
 Light and dark mode are toggeable via the slider in the bottom left corner. 
-![ScreenShot](/Screenshots/screenshot_0.jpg)
+![ScreenShot](/Screenshots/screenshot 0.jpg)
 ![ScreenShot](/Screenshots/screenshot1.jpg)
 To Build: 
 -Clone this repository
