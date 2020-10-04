@@ -1,0 +1,220 @@
+.theme-dark {
+	--color-navbar: #884b5c;
+	--color-navbar-hover: #601837;
+	--color-navbar-text: white;
+	--color-navbar-text-hover: #e89fcd;
+	--color-scrollbar: #601837;
+	--color-scrollbar-hover: #350d2c;
+	--color-toggle: #795778;
+	--color-button: #805e85;
+	--color-button-hover: #6b4e6e;
+	--color-border: #b161ac;
+	--bg-image: url("../Images/flower.jpg");
+}
+.theme-light {
+	--color-navbar: #a7d5ad;
+	--color-navbar-hover: #91b996;
+	--color-navbar-text: white;
+	--color-navbar-text-hover: #efa0ec;
+	--color-scrollbar: #467250;
+	--color-scrollbar-hover: #384f3d;
+	--color-toggle: #b1d7a7;
+	--color-button: #4caf50;
+	--color-button-hover: #45a049;
+	--color-border: #61b165;
+	--bg-image: url("../Images/daisies.jpg");
+}
+
+html {
+	background-image: var(--bg-image);
+}
+
+span {
+	padding: 3px;
+	display: block;
+}
+
+li {
+	list-style-type: none;
+	display: inline;
+	padding: 10px;
+	font-size: 30px;
+}
+a {
+	color: var(--color-navbar-text);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: "Raleway", sans-serif;
+}
+a:hover {
+	color: var(--color-navbar-text-hover);
+}
+
+.navbar {
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	top: 10px;
+	left: 55%;
+	background: var(--color-navbar);
+	width: 45%;
+	right: 0px;
+	z-index: 2;
+}
+
+.navbar:hover {
+	background: var(--color-navbar-hover);
+}
+
+.container {
+	margin: 0 auto;
+	width: 40%;
+	margin-top: 10%;
+	height: 80%;
+	align-items: center;
+	text-align: center;
+	min-height: 60vh;
+	text-align: center;
+	color: white;
+	text-size: 30px;
+}
+
+header {
+	margin-top: 0px;
+	text-size: 50px;
+}
+
+input,
+select,
+textarea {
+	width: 90%;
+	padding: 5px;
+	border: 1px solid var(--color-border);
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	resize: vertical;
+}
+
+button {
+	background-color: var(--color-button);
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--color-button-hover);
+}
+
+.switch {
+	left: 20px;
+	bottom: 20px;
+	position: fixed;
+	display: block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 1;
+	width: 10px;
+	height: 10px;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-toggle);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-scrollbar);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-scrollbar-hover);
+}
+
+@media screen and (max-width: 1000px) {
+	.navbar {
+		margin: 0px;
+		padding: 0px;
+		left: 0px;
+		top: 10px;
+		background: var(--color-navbar);
+		width: 100%;
+		display: block;
+		z-index: 4;
+		text-align: center;
+	}
+	.container {
+		margin: 0 auto;
+		width: 70%;
+		margin-top: 20%;
+		height: 50%;
+		align-items: center;
+		text-align: center;
+		min-height: 60vh;
+		text-align: center;
+		color: white;
+		text-size: 30px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.navbar {
+		margin: 0px;
+		padding: 0px;
+		left: 0px;
+		top: 10px;
+		background: var(--color-navbar);
+		width: 100%;
+		display: block;
+		z-index: 4;
+		text-align: center;
+	}
+	.container {
+		margin: 0 auto;
+		width: 90%;
+		margin-top: 35%;
+		height: 50%;
+		align-items: center;
+		text-align: center;
+		min-height: 60vh;
+		text-align: center;
+		color: white;
+		text-size: 30px;
+	}
+}

@@ -1,0 +1,166 @@
+.theme-dark {
+	--color-navbar: #884b5c;
+	--color-navbar-hover: #601837;
+	--color-navbar-text: white;
+	--color-navbar-text-hover: #e89fcd;
+	--color-scrollbar: #601837;
+	--color-scrollbar-hover: #350d2c;
+	--color-toggle: #795778;
+	--bg-image: url("../Images/flower.jpg");
+}
+.theme-light {
+	--color-navbar: #a7d5ad;
+	--color-navbar-hover: #91b996;
+	--color-navbar-text: white;
+	--color-navbar-text-hover: #efa0ec;
+	--color-scrollbar: #467250;
+	--color-scrollbar-hover: #384f3d;
+	--color-toggle: #b1d7a7;
+	--bg-image: url("../Images/daisies.jpg");
+}
+
+html {
+	background-image: var(--bg-image);
+}
+
+header {
+	font-size: 13vh;
+	color: var(--color-navbar-text);
+	font-family: "Abril Fatface", cursive;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 100vh;
+}
+
+li {
+	list-style-type: none;
+	display: inline;
+	padding: 10px;
+	font-size: 30px;
+}
+a {
+	color: var(--color-navbar-text);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: "Raleway", sans-serif;
+}
+a:hover {
+	color: var(--color-navbar-text-hover);
+}
+
+.navbar {
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	top: 10px;
+	left: 55%;
+	background: var(--color-navbar);
+	width: 45%;
+	right: 0px;
+	z-index: 2;
+}
+
+.navbar:hover {
+	background: var(--color-navbar-hover);
+}
+
+.switch {
+	left: 20px;
+	bottom: 20px;
+	position: fixed;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 1;
+	width: 10px;
+	height: 10px;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-toggle);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-scrollbar);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-scrollbar-hover);
+}
+
+@media screen and (max-width: 1000px) {
+	.navbar {
+		margin: 0px;
+		padding: 0px;
+		left: 0px;
+		top: 10px;
+		background: var(--color-navbar);
+		width: 100%;
+		display: block;
+		z-index: 4;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.navbar {
+		margin: 0px;
+		padding: 0px;
+		position: fixed;
+		left: 0px;
+		top: 10px;
+		background: var(--color-navbar);
+		width: 100%;
+		z-index: 2;
+		text-align: center;
+	}
+	header {
+		font-size: 6vh;
+		color: var(--color-navbar-text);
+		font-family: "Abril Fatface", cursive;
+		text-transform: uppercase;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		min-height: 100vh;
+	}
+}

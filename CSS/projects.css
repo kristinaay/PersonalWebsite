@@ -1,0 +1,339 @@
+.theme-dark {
+	--color-background: #0f4b30;
+	--color-navbar: #884b5c;
+	--color-navbar-hover: #601837;
+	--color-navbar-text: white;
+	--color-navbar-text-hover: #e89fcd;
+	--color-scrollbar: #601837;
+	--color-scrollbar-hover: #350d2c;
+	--color-toggle: #795778;
+	--color-grid: #a84169;
+	--color-grid-hover: #f1b5cb;
+}
+.theme-light {
+	--color-background: #f1f3d2;
+	--color-navbar: #a7d5ad;
+	--color-navbar-hover: #91b996;
+	--color-navbar-text: white;
+	--color-navbar-text-hover: #efa0ec;
+	--color-scrollbar: #467250;
+	--color-scrollbar-hover: #384f3d;
+	--color-toggle: #b1d7a7;
+	--color-grid: #536e5b;
+	--color-grid-hover: #9db975;
+}
+
+html {
+	background: var(--color-background);
+}
+
+li {
+	list-style-type: none;
+	display: inline;
+	padding: 10px;
+	font-size: 30px;
+}
+.navbar a {
+	color: var(--color-navbar-text);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: "Raleway", sans-serif;
+}
+.navbar a:hover {
+	color: var(--color-navbar-text-hover);
+}
+
+.navbar {
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	top: 10px;
+	left: 55%;
+	background: var(--color-navbar);
+	width: 45%;
+	right: 0px;
+	z-index: 2;
+}
+
+.navbar:hover {
+	background: var(--color-navbar-hover);
+}
+
+#grid {
+	position: relative;
+	width: 47%;
+	height: 47%;
+	margin: 0 auto;
+	margin-top: 10%;
+	padding: 0;
+	margin-bottom: 10%;
+}
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#grid li {
+	list-style-type: none;
+	position: relative;
+	float: left;
+	width: 27.85714285714286%;
+	padding: 0 0 32.16760145166612% 0;
+	-o-transform: rotate(-60deg) skewY(30deg);
+	-moz-transform: rotate(-60deg) skewY(30deg);
+	-webkit-transform: rotate(-60deg) skewY(30deg);
+	-ms-transform: rotate(-60deg) skewY(30deg);
+	transform: rotate(-60deg) skewY(30deg);
+	background: var(--color-grid);
+	overflow: hidden;
+	visibility: hidden;
+}
+
+#grid li .hexagon {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	-o-transform: skewY(-30deg) rotate(60deg);
+	-moz-transform: skewY(-30deg) rotate(60deg);
+	-webkit-transform: skewY(-30deg) rotate(60deg);
+	-ms-transform: skewY(-30deg) rotate(60deg);
+	transform: skewY(-30deg) rotate(60deg);
+	overflow: hidden;
+	background: var(--color-grid);
+}
+
+#grid li .hexagon:hover {
+	background: var(--color-grid-hover);
+}
+
+#grid li * {
+	visibility: visible;
+}
+
+#grid li:nth-child(3n + 2) {
+	margin: 0 1%;
+}
+
+#grid li:nth-child(6n + 4),
+#grid li:nth-child(6n + 5),
+#grid li:nth-child(6n + 6) {
+	margin-top: -6.9285714285%;
+	margin-bottom: -6.9285714285%;
+	-o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+	-moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+	-webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+	-ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+	transform: translateX(50%) rotate(-60deg) skewY(30deg);
+}
+
+#grid li:nth-child(6n + 4) {
+	margin-left: 0.5%;
+}
+
+.hexagon a {
+	margin: 0px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: "Raleway", sans-serif;
+	font-size: 18px;
+}
+
+.hexagon a:hover {
+	color: #350d2c;
+	text-decoration: overline;
+}
+
+.hexagon p {
+	margin: 0px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: "Raleway", sans-serif;
+	font-size: 18px;
+}
+
+.switch {
+	left: 20px;
+	bottom: 20px;
+	position: fixed;
+	display: block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 1;
+	width: 10px;
+	height: 10px;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-toggle);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-scrollbar);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-scrollbar-hover);
+}
+
+@media screen and (max-width: 1000px) {
+	.navbar {
+		margin: 0px;
+		padding: 0px;
+		left: 0px;
+		top: 10px;
+		background: var(--color-navbar);
+		width: 100%;
+		display: block;
+		z-index: 4;
+		text-align: center;
+	}
+	#grid {
+		position: relative;
+		width: 90%;
+		height: 90%;
+		margin: 0 auto;
+		margin-top: 20%;
+		padding: 0;
+	}
+	.hexagon a {
+		margin: 0px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		color: white;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: "Raleway", sans-serif;
+		font-size: 12px;
+	}
+	.hexagon p {
+		margin: 0px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		color: white;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: "Raleway", sans-serif;
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.navbar {
+		margin: 0px;
+		padding: 0px;
+		left: 0px;
+		top: 10px;
+		background: var(--color-navbar);
+		width: 100%;
+		display: block;
+		z-index: 4;
+		text-align: center;
+	}
+	#grid {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		margin-top: 35%;
+		padding: 0;
+	}
+	.hexagon a {
+		margin: 0px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		color: white;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: "Raleway", sans-serif;
+		font-size: 10px;
+	}
+	.hexagon p {
+		margin: 0px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		color: white;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: "Raleway", sans-serif;
+		font-size: 10px;
+	}
+}
