@@ -15,5 +15,5 @@ To Build: \
 -In the command line, enter the folder containing all the project files\
 -In the command line, type "http-server" to run the site\
 -Type "localhost:8080" or "localhost:(number of the server that is stated)" into your web browser\
--See the website!\
+-See the website!
 
