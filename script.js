@@ -1,9 +1,9 @@
-document.getElementById(document).ready(function () {
-	document.getElementById(".submit").click(function (event) {
+document.querySelector(document).ready(function () {
+	document.querySelector(".submit").click(function (event) {
 		console.log("Clicked Button");
 
-		let email = document.getElementById(".email").val();
-		let status = document.getElementById(".status");
+		let email = document.querySelector(".email").val();
+		let status = document.querySelector(".status");
 		status.empty();
 
 		//validate email
