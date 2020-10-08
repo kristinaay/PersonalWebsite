@@ -283,7 +283,10 @@ input:checked + .slider:before {
 		font-size: 12px;
 	}
 }
-
+<!-- Yihong: Such a beautiful page ! I love it so much ! But I think font size for project could be larger and stable.
+	It seems that the change of the font size sometims doesn't match the winddow size. When the window takes up half of the screen, the font size seems too small for me.
+	Also, sometimes the font size just jumps from a small one to a big one when the window size changes. -->
+	
 @media screen and (max-width: 600px) {
 	.navbar {
 		margin: 0px;
